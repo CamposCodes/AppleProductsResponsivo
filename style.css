@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+    --color1 : #280E29;
+    --color2 : #FFFFFF;
+    --color3 : rgba(235, 235, 235, 0.539);
+}
+
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--color2);
+}
+body{
+    background: var(--color1);
 }
 .container{
     padding: 2rem;
@@ -11,7 +24,7 @@
 }
 .avatar-card{
     margin-top: 2rem;
-    background-color: rgba(235, 235, 235, 0.539);
+    background-color: var(--color3);
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
@@ -20,11 +33,11 @@
 .setas{
     width: 3rem;
     height: 3rem;
-    transition: .4s;
+    transition: .7s;
     margin: 1rem;
 }
 .setas:hover{
-    animation: blink 1s;
+    animation: blink .7s;
     transform: scale(1.10);
 }
 @keyframes blink {
@@ -42,7 +55,7 @@
     filter: drop-shadow(.2rem .2rem 1rem rgba(0, 0, 0, 0.715));
 }
 .avatar-img:hover{
-    animation: up 1s ease infinite;
+    animation: up .7s ease infinite;
 }
 @keyframes up {
     0%,100%{
@@ -50,5 +63,23 @@
     }
     50%{
         -webkit-transform: translateY(2px); 
+    }
+}
+
+.animation-avatar{
+    animation: bounceX .7s ;
+}
+@keyframes bounceX {
+    0%, 20%, 60%, 100%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    40%{
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    80%{
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
     }
 }
