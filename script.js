@@ -1,18 +1,19 @@
-let avatarName  = document.querySelector(".avatar-nome");
 let quant = document.querySelectorAll(".avatar-card .avatar-img");
 let atual = 0;
 let avatarAtual = document.getElementById("atual");
 let setaE       = document.querySelector("#seta-esquerda");
 let setaD       = document.querySelector("#seta-direita");
+let nome = 0;
+let nomeAtual = document.getElementById("nome-atual");
 
-
-function animationName(){
-    if(avatarName.classList.contains('animation-avatar')){
-        avatarName.classList.remove('animation-avatar');
+function slideName(){
+    if(nome >= quant.length){
+        nome = 0;
     }
-    else{
-        avatarName.classList.add('animation-avatar');
+    else if(nome < 0){
+        nome = quant.length - 1;
     }
+    nomeAtual.style.marginLeft =  -17 * nome  + 'rem';
 }
 
 function slide(){
@@ -28,13 +29,15 @@ function slide(){
 
 
 setaE.addEventListener("click", () => {
-    animationName();
     atual --;
+    nome --;
     slide();
+    slideName();
 });
 setaD.addEventListener("click", () => {
-    animationName();
     atual++;
+    nome ++;
     slide();
+    slideName();
 });
 

@@ -91,7 +91,7 @@ body{
 }
 
 .animation-avatar{
-    animation: bounceX .7s forwards;
+    animation: bounceX .5s;
 }
 @keyframes bounceX {
     0%, 20%, 60%, 100%{
@@ -99,19 +99,40 @@ body{
         transform: translateX(0);
     }
     40%{
-        -webkit-transform: translateX(-20px);
-        transform: translateX(-20px);
+        -webkit-transform: translateX(-1rem);
+        transform: translateX(-1rem);
     }
     80%{
-        -webkit-transform: translateX(-10px);
-        transform: translateX(-10px);
+        -webkit-transform: translateX(-0.5rem);
+        transform: translateX(-0.5rem);
     }
 }
-.avatar-nome{
-    position: absolute;
+
+.nomes{
+    margin-top: .5rem;
+    border: 1px solid var(--color2);
+    border-radius: 1rem;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    top: 70%;
-    margin: 4rem;
+    overflow: hidden;
+    width: 15rem;
+    height: 1.5rem;
+    padding: 1%;
+}
+.avatar-nome{
+    width: 15rem;
+    display: flex;
+    text-align: center;
+    margin-left: 2.1rem;
+}
+h3{
+    width: 15rem;
+    display: flex;
+    text-align: center;
+}
+
+#nome-atual{
+    margin-left: 0;
+    transition: .7s;
 }
