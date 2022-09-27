@@ -29,12 +29,35 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    width: 20rem;
+    height: 30rem;
+}
+.avatar{
+    display: flex;
+}
+#atual{
+    margin-left: 0rem;
+    transition: .7s;
 }
 .setas{
+    transition: .7s;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+.setas img{
     width: 3rem;
     height: 3rem;
-    transition: .7s;
-    margin: 1rem;
+}
+#seta-direita{
+    top: 50%;
+    right: 25%;
+}
+#seta-esquerda{
+    left: 25%;
+    top: 50%;
 }
 .setas:hover{
     animation: blink .7s;
@@ -50,19 +73,20 @@ body{
 }
 
 .avatar-img{
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
     filter: drop-shadow(.2rem .2rem 1rem rgba(0, 0, 0, 0.715));
 }
 .avatar-img:hover{
     animation: up .7s ease infinite;
+    cursor: pointer;
 }
 @keyframes up {
     0%,100%{
-        -webkit-transform: translateY(-2px);
+        -webkit-transform: translateY(-0.5rem);
     }
     50%{
-        -webkit-transform: translateY(2px); 
+        -webkit-transform: translateY(0.5rem); 
     }
 }
 
@@ -82,4 +106,12 @@ body{
         -webkit-transform: translateX(-10px);
         transform: translateX(-10px);
     }
+}
+.avatar-nome{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 70%;
+    margin: 4rem;
 }
