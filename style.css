@@ -67,7 +67,7 @@ body{
 }
 
 .animation-avatar{
-    animation: bounceX .7s ;
+    animation: bounceX .7s forwards;
 }
 @keyframes bounceX {
     0%, 20%, 60%, 100%{
