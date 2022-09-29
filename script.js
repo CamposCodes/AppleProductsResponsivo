@@ -4,7 +4,7 @@ let productAtual = document.getElementById("atual");
 let setaE       = document.querySelector("#seta-esquerda");
 let setaD       = document.querySelector("#seta-direita");
 let nome = 0;
-
+   
 
 function slide(){
     if(atual >= quant.length){
