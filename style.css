@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
 
 :root{
-    --color1 : #6d6d6d;
-    --color2 : #FFFFFF;
-    --color3 : rgba(235, 235, 235, 0.539);
+    --color1 : #b5b5b5;
+    --color2 : #ffffff;
+    --color3 : #ffffff83;
+    --color4 : rgb(141, 141, 141);
 }
 
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Space Grotesk', sans-serif;
     color: var(--color2);
 }
 body{
@@ -21,20 +22,50 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+.container h2{
+    letter-spacing: 1rem;
+    animation: up 10s infinite;
 }
 .avatar-card{
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     background-color: var(--color3);
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     overflow: hidden;
     width: 20rem;
-    height: 30rem;
+    height: 25rem;
 }
 .avatar{
     display: flex;
+}
+.avatar .product{
+    font-size: 20px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+}
+.avatar .price{
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--color4);
+}
+.avatar-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.avatar-img img{
+    width: 20rem;
+    height: 20rem;
+}
+.avatar-img img:hover{
+    animation: up .7s ease-in-out infinite;
+    cursor: pointer;
 }
 #atual{
     margin-left: 0rem;
@@ -72,15 +103,6 @@ body{
     }
 }
 
-.avatar-img{
-    width: 20rem;
-    height: 20rem;
-    filter: drop-shadow(.2rem .2rem 1rem rgba(0, 0, 0, 0.715));
-}
-.avatar-img:hover{
-    animation: up .7s ease-in-out infinite;
-    cursor: pointer;
-}
 @keyframes up {
     0%,100%{
         -webkit-transform: translateY(-0.7rem);
