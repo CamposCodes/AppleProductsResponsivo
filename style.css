@@ -161,13 +161,13 @@ h3{
 
 @media screen and (max-width: 730px){
     #seta-direita{
-        top: 29rem;
-        right: 2rem;
+        top: 25rem;
+        right: 8rem;
         font-size: 10px;
     }
     #seta-esquerda{
-        top: 29rem;
-        left: 2rem;
+        top: 25rem;
+        left: 8rem;
         
     }
     .setas img{
